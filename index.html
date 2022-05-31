@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-valid">
+            <div>
+                <div id="prograss"></div>
+                <span class="step1">Step1</span>
+                <span class="step2">Step2</span>
+                <span class="step3">Step3</span>
+                <hr id="steps">
+            </div>
+
+
+
+            <!-- form1 -->
+
+            <form id="form1" action="#">
+
+                <h3>Create Account</h3>
+
+                <input type="text" placeholder="Email Id" required><br>
+                <hr>
+                <input type="password" placeholder="Password" required><br>
+                <hr>
+                <input type="password" placeholder="Confirm Password" required>
+                <hr>
+                <div class="form1-btn">
+                    <button type="submit" id="Next1">Next</button>
+                </div>
+
+            </form>
+
+            <!-- form2 -->
+
+            <form id="form2" action="#">
+
+                <h3>Social Links</h3>
+
+                <input class="input-social" type="text" placeholder="Facebook" required><br>
+                <hr>
+                <input class="input-social" type="text" placeholder="Ghithub" required><br>
+                <hr>
+                <input class="input-social" type="text" placeholder="Linkedin" required>
+                <hr>
+                <div class="form1-btn">
+                    <button type="button" id="Back1">Back</button>
+                    <button type="submit" id="Next2">Next</button>
+                </div>
+
+            </form>
+
+            <!-- form3 -->
+
+
+            <form id="form3" action="#">
+
+                <h3>Personal Info</h3>
+
+                <input type="text" placeholder="First name" required><br>
+                <hr>
+                <input type="text" placeholder="Last name" required><br>
+                <hr>
+                <input type="number" placeholder="Mobile no." required>
+                <hr>
+                <div class="form1-btn">
+                    <button type="button" id="Back2">Back</button>
+                    <button type="submit">submit</button>
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var form1 = document.getElementById("form1");
+        var form2 = document.getElementById("form2");
+        var form3 = document.getElementById("form3");
+
+        var Next1 = document.getElementById("Next1");
+        var Next2 = document.getElementById("Next2");
+        var Back = document.getElementById("Back1");
+        var Back2 = document.getElementById("Back2");
+
+        var prograss = document.getElementById("prograss");
+
+        Next1.onclick = function () {
+            form1.style.display = "none";
+            form2.style.left = " 60px";
+            prograss.style.width = "250px";
+
+        }
+        Back1.onclick = function () {
+            form1.style.display = "block";
+            form2.style.left = "550px";
+            prograss.style.width = "120px";
+
+
+        }
+
+        Next2.onclick = function () {
+            form2.style.display = "none";
+            form3.style.left = " 60px";
+            prograss.style.width = "380px";
+
+
+        }
+
+        Back2.onclick = function () {
+            form2.style.display = "block";
+            form3.style.left = " 550px";
+            prograss.style.width = "250px";
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
